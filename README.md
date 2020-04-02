@@ -1,5 +1,7 @@
 # leetcode-30day-2020
 
+## [Solutions](https://github.com/TannerPerrien/leetcode-30day-2020/tree/master/src/main/kotlin)
+
 ### D1 - Single Number
 
 Given a **non-empty** array of integers, every element appears twice except for one. Find that single one.
