@@ -1,4 +1,4 @@
-import java.util.HashSet;
+import java.util.*
 
 /**
  * Write an algorithm to determine if a number is "happy".
@@ -15,30 +15,32 @@ import java.util.HashSet;
  * 12 + 02 + 02 = 1
  * ```
  */
-class D02_HappyNumber {
-    public boolean isHappy(int n) {
-        HashSet<Integer> visited = new HashSet<>();
-        
+class D02_HappyNumberK {
+
+    fun isHappy(n: Int): Boolean {
+        var n = n
+        val visited = HashSet<Int>()
+
         while (true) {
             if (visited.contains(n)) {
-                return false;
+                return false
             }
-            visited.add(n);
-            int temp = n;
-            int next = 0;
-            while(temp > 0) {
-                int digit = temp % 10;
-                next += digit * digit;
-                temp /= 10;
+            visited.add(n)
+            var temp = n
+            var next = 0
+            while (temp > 0) {
+                val digit = temp % 10
+                next += digit * digit
+                temp /= 10
             }
             if (next == 1) {
-                return true;
+                return true
             }
-            n = next;
+            n = next
         }
     }
+}
 
-    public static void main(String[] args) {
-        System.out.println(new D02_HappyNumber().isHappy(19));
-    }
+fun main() {
+    println(D02_HappyNumberK().isHappy(19))
 }
